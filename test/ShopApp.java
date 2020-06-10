@@ -7,17 +7,17 @@ public class ShopApp {
 		
 		Shop[] arr = new Shop[3];
 		for(int i = 0; i < arr.length; i++) {
-			Shop student = new Shop();
+			Shop shop = new Shop();
 			System.out.println("이름: ");
-			student.setName(scanner.next());
+			shop.setName(scanner.next());
 			System.out.println("폰 가격: ");
-			student.setPhone(scanner.nextInt());
+			shop.setPhone(scanner.nextInt());
 			System.out.println("TV 가격: ");
-			student.setTv(scanner.nextInt());
+			shop.setTv(scanner.nextInt());
 			System.out.println("컴퓨터 가격: ");
-			student.setComputer(scanner.nextInt());
-			student.sum();
-			arr[i] = student;
+			shop.setComputer(scanner.nextInt());
+			shop.sum();
+			arr[i] = shop;
 		}
 			
 			for(int i = 0; i < arr.length; i++) {
