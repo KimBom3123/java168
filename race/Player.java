@@ -9,7 +9,7 @@ public class Player {
 		this.name = name;
 	}
 	public String getName () {
-		return this.name;
+		return this.name;     // getname, setnameì€ privateì— ê°’ì„ 
 	}
 	public void setRecord (int record) {
 		this.record = record;
@@ -18,7 +18,7 @@ public class Player {
 		return this.record;
 	}
 	public void showRecord() {
-		System.out.println("¼ºÇÔ: " + name + ", 100m ±â·Ï: " + record + "ÃÊ");
+		System.out.println("ì„±í•¨: " + name + ", 100m ê¸°ë¡: " + record + "ì´ˆ");
 		
 	}
 	

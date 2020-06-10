@@ -4,11 +4,11 @@ public class Shop {
 	private String name;
 	private int phone, tv, computer, sum;
 	
-	public void setName(String name) { // °ªÀ» ÁöÁ¤ÇÑ´Ù. ¼¼ÅÍ
+	public void setName(String name) { // ê°’ì„ ì§€ì •í•œë‹¤. ì„¸í„°
 		this.name = name; 
 	}
 	public String getName() {
-		return this.name; // °ªÀ» ¹İÈ¯ÇÑ´Ù
+		return this.name; // ê°’ì„ ë°˜í™˜í•œë‹¤
 	}
 	public void setPhone(int phone) {
 		this.phone = phone;
@@ -35,6 +35,6 @@ public class Shop {
 	
 	public void printStates() {
 		System.out.println(
-		name + "´ÔÀÇ " + "Æù °¡°İ: " + phone + "¸¸¿ø, " + "TV °¡°İ: " + tv + "¸¸¿ø, " + "ÄÄÇ»ÅÍ °¡°İ: " + computer + "¸¸¿ø, " + "°áÁ¦ÇÏ½Ç ÃÑ ±İ¾×Àº " + sum + "¸¸¿ø ÀÔ´Ï´Ù. ");
+		name + "ë‹˜ì˜ " + "í° ê°€ê²©: " + phone + "ë§Œì›, " + "TV ê°€ê²©: " + tv + "ë§Œì›, " + "ì»´í“¨í„° ê°€ê²©: " + computer + "ë§Œì›, " + "ê²°ì œí•˜ì‹¤ ì´ ê¸ˆì•¡ì€ " + sum + "ì…ë‹ˆë‹¤. ");
 }
 }

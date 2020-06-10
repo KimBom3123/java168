@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class PlayerApp {
 	public static void main(String[] args) {
 	Scanner scanner = new Scanner(System.in);
-	Player[] players = new Player[3]; // ¸î ¸íÀÌ ÀÌ °æ±â¿¡ Âü°¡ÇÏ´ÂÁö Á¤ÇÔ
+	Player[] players = new Player[3]; // ëª‡ ëª…ì´ ì´ ê²½ê¸°ì— ì°¸ê°€í•˜ëŠ”ì§€ ì •í•¨
 	for(int i=0; i<players.length;i++) {
 		Player player = new Player();
-		System.out.println("ÀÌ¸§: ");
+		System.out.println("ì„±í•¨: ");
 		String name = scanner.next();
 		player.setName(name);
-		System.out.println("100m ±â·Ï: ");
+		System.out.println("100m ê¸°ë¡: ");
 		int time = scanner.nextInt();
 		player.setRecord(time);
 		players[i] = player;
@@ -20,7 +20,7 @@ public class PlayerApp {
 		players[i].showRecord();
 	}
 	
-	Player[] ranking = new Player[3];  // Á¡¼ö¿¡ µû¶ó ¼øÀ§¸¦ ¸Ş±è
+	Player[] ranking = new Player[3];  // ì ìˆ˜ì— ë”°ë¼ ìˆœìœ„ë¥¼ ë§¤ê¹€
 	if(players[0].getRecord()< players[1].getRecord()) {
 		if(players[0].getRecord()< players[2].getRecord()) {
 			ranking[0] = players[0];
@@ -36,12 +36,12 @@ public class PlayerApp {
 			ranking[0] = players[2];
 		} 
 		}
-	System.out.println("1µîÀº " + ranking[0].getName());
+	System.out.println("1ë“±ì€ " + ranking[0].getName());
 	}
 }
 
     /**
-	// System.out.println(players[0].getName()+"ÀÌ " + players[1].getName()+"º¸´Ù ºü¸£´Ù.");
-	// System.out.println(players[1].getName()+"ÀÌ "+players[0].getName()+"º¸´Ù ºü¸£´Ù.");
+	// System.out.println(players[0].getName()+"ì´ " + players[1].getName()+"ë³´ë‹¤ ë¹ ë¥´ë‹¤.");
+	// System.out.println(players[1].getName()+"ì´ "+players[0].getName()+"ë³´ë‹¤ ë¹ ë¥´ë‹¤.");
     
     * */

@@ -8,13 +8,13 @@ public class ShopApp {
 		Shop[] arr = new Shop[3];
 		for(int i = 0; i < arr.length; i++) {
 			Shop shop = new Shop();
-			System.out.println("ÀÌ¸§: ");
+			System.out.println("ì´ë¦„: ");
 			shop.setName(scanner.next());
-			System.out.println("Æù °¡°Ý: ");
+			System.out.println("í° ê°€ê²©: ");
 			shop.setPhone(scanner.nextInt());
-			System.out.println("TV °¡°Ý: ");
+			System.out.println("TV ê°€ê²©: ");
 			shop.setTv(scanner.nextInt());
-			System.out.println("ÄÄÇ»ÅÍ °¡°Ý: ");
+			System.out.println("ì»´í“¨í„° ê°€ê²©: ");
 			shop.setComputer(scanner.nextInt());
 			shop.sum();
 			arr[i] = shop;
