@@ -21,22 +21,18 @@ public class PlayerApp {
 	}
 	
 	Player[] ranking = new Player[3];  // 점수에 따라 순위를 매김
-	if(players[0].getRecord()< players[1].getRecord()) {
-		if(players[0].getRecord()< players[2].getRecord()) {
-			ranking[0] = players[0];
-		} else {
-			ranking[0] = players[2];
+	String name = "";
+	if(players[0].getRecord() < players[1].getRecord()
+			&& players[0].getRecord() < players[2].getRecord()) {
+		name = players[0].getName();
+	}else if(players[1].getRecord()< players[0].getRecord()
+			&& players[1].getRecord() < players[2].getRecord()) {
+		name = players[1].getName();
+	}else {
+		name = players[2].getName();
 		}
 			
-	
-	} else {
-		if(players[1].getRecord() < players[2].getRecord()) {
-			ranking[0] = players[1];	
-		}else {
-			ranking[0] = players[2];
-		} 
-		}
-	System.out.println("1등은 " + ranking[0].getName());
+	System.out.println("1등은 " + name);
 	}
 }
 
