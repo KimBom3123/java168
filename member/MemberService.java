@@ -3,5 +3,6 @@ package member;
 public interface MemberService {
 	public void join(Member member); 		// return을 모를 때엔 일단 void값을 준다.
 	public void login();
+	public Member[] list();
 
 }
