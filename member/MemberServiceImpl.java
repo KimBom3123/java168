@@ -2,40 +2,46 @@ package member;
 
 public class MemberServiceImpl implements MemberService{
 	private Member[] members;
-	private int idx;
+	private int count;
 	
 	public MemberServiceImpl() {
 		members = new Member[3]; // 인스턴스 변수 생성
-		idx = 0;
+		count = 0;
 	}
 
 	@Override
 	public void join(Member member) {
-		System.out.println("App에서 넘어온 회원 정보");
-		System.out.println(member.toString());
-		members[idx] = member;
-		idx++;
-		System.out.println("증가된 인덱스값: " + idx);
-		System.out.println("배열에 저장된 회원 정보");
-		for(int i=0; i < members.length; i++) {
-			if(members[i]!= null) {
-				System.out.println(members[i].toString());
-			}else {
-				System.out.println("회원 정보가 존재하지 않습니다.");
-			}
-
-		}
-
+		members[count] = member;
+		count++;
 	}
 
 	@Override
-	public void login() {
-		
+	public String login(Member member) {
+		String result = "FAIL";
+		for(int i = 0; i < count; i++) {
+			if (member.getUserid().equals(members[i].getUserid())
+					&& member.getPassword().equals(members[i].getPassword())) {
+				result = "SUCCESS";
+				break;
+			}
+		}
+		return result;
 	}
-
+	
 	@Override
 	public Member[] list() {
 		return members;
+	}
+
+	@Override
+	public String yesId(Member member) {
+		String result = "사용 가능한 아이디입니다.";
+		for(int i = 0; i < count; i++) {
+			if(member.getUserid().contentEquals(members[i].getUserid())) {
+				result = "중복된 아이디입니다.";
+			}
+		}
+		return result;
 	}
 
 }

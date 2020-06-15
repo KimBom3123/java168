@@ -27,5 +27,6 @@ public class Member {
 	public String toString() {
 		return "[아이디: " + userid + "], [비밀번호: " + password + "], [이름: " + name + "]";
 	}
+	
 
 }
