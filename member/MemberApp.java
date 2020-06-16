@@ -59,6 +59,7 @@ public class MemberApp {
 				break;
 			case 4:
 				System.out.println("회원 탈퇴");
+				member = new Member();
 				
 			case 5:
 				System.out.println("아이디 존재 체크");
